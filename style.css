@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #6e45e2, #89d4cf, #6e45e2, #89d4cf);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+    overflow: hidden;
+    font-family: 'Orbitron', sans-serif;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+h1 {
+    color: white;
+    font-size: 4rem;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    animation: fadeIn 2s ease-in-out, pulse 2s infinite alternate;
+    letter-spacing: 2px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    from { text-shadow: 0 0 10px rgba(255, 255, 255, 0.7); }
+    to { text-shadow: 0 0 20px rgba(174, 0, 255, 0.9); }
+}
+
+h1:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Floating particles */
+.particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    animation: float 5s infinite linear;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    50% { opacity: 0.8; }
+    100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
