@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="text-black font-geist">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello World – Salamander Tech Hub</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-6 relative overflow-hidden">
+
+  <!-- Moving Background Layer -->
+  <div class="animated-bg absolute top-0 left-0 w-full h-full -z-10"></div>
+
+  <!-- Navbar -->
+  <nav class="w-full flex items-center justify-between py-4 px-6 shadow-md bg-white bg-opacity-80 backdrop-blur-md z-10">
+    <a href="#">
+      <img src="assets/images/salamander-logo-yellow.svg" alt="Salamander Logo" class="h-10">
+    </a>
+    <p class="text-sm font-medium text-gray-700 animate-text-fade">build🚀. burn 🔥. evolve 🦎</p>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="flex-1 w-full max-w-xl bg-white/90 shadow-xl rounded-xl mt-10 p-8 border-l-[10px] border-[#FFED00] animate-fadeIn z-10 backdrop-blur-md">
+    <div class="flex flex-col items-center text-center space-y-4">
+
+      <!-- Logo -->
+      <img src="assets/images/salamander-logo-yellow.svg" alt="Salamander Tech Hub" class="h-16 w-16" />
+
+      <!-- Animated Heading -->
+      <h1 id="helloTitle" class="text-3xl font-semibold text-yellow-500 hover:font-extrabold hover:font-serif transition-all duration-500 hover:text-yellow-600 cursor-pointer glow-on-hover">
+        Hello, World! 👋
+      </h1>
+
+      <!-- Animated Subtitle -->
+      <p class="text-md font-medium text-slate-700 animate-subtle-pulse">
+        Welcome to my Hello World page
+      </p>
+
+      <!-- Card Section -->
+      <div class="bg-[#FFED00]/10 text-gray-800 p-4 rounded-md w-full mt-4 animate-text-slide-in">
+        <p>
+          Salamander Tech Hub is a space to grow, ignite ideas, and evolve in code.
+          I’m <strong class="text-yellow-600">Tazma</strong>, and I’m excited to be part of this journey!
+        </p>
+      </div>
+
+      <!-- Button -->
+      <button id="ctaBtn" class="bg-[#FFED00] hover:bg-yellow-400 transition-all px-6 py-2 rounded-lg mt-4 font-semibold shadow-md glow-on-hover hover:scale-105">
+        Learn More // 👓
+      </button>
+
+      <!-- Easter Egg -->
+      <div id="easterEgg" class="mt-6 text-sm text-pink-600 hidden animate-wiggle">
+        🔥 You've unlocked the Salamander Flame. Burn brighter, dev! 🔥
+      </div>
+
+      <!-- Footer -->
+      <footer class="text-sm text-gray-500 mt-6 animate-text-fade">
+        Created with ❤️ by Taz
+      </footer>
+    </div>
+  </main>
+
+  <!-- Easter Egg Reveal Script -->
+  <script>
+    document.getElementById('ctaBtn').addEventListener('click', () => {
+      const egg = document.getElementById('easterEgg');
+      egg.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
