@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap');
+
+body {
+  font-family: 'Geist', sans-serif;
+}
+
+/* Font change on hover */
+.hover\:font-serif:hover {
+  font-family: 'Playfair Display', serif !important;
+}
+
+/* Glow effect */
+.glow-on-hover:hover {
+  text-shadow: 0 0 8px #FFED00, 0 0 12px #FFED00;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeIn 1.2s ease-out;
+}
+
+/* Subtle text pulse */
+@keyframes subtlePulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+.animate-subtle-pulse {
+  animation: subtlePulse 2s infinite ease-in-out;
+}
+
+/* Slide in for card text */
+@keyframes textSlideIn {
+  from { opacity: 0; transform: translateX(-10px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.animate-text-slide-in {
+  animation: textSlideIn 0.8s ease-out;
+}
+
+/* Text fade for footer, nav quote */
+@keyframes textFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.animate-text-fade {
+  animation: textFade 2s ease-in forwards;
+}
+
+/* Wiggle effect for Easter egg */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-1deg); }
+  50% { transform: rotate(1deg); }
+}
+.animate-wiggle {
+  animation: wiggle 0.4s infinite ease-in-out;
+}
+
+/* 🔁 Moving background animation */
+.animated-bg {
+  background: linear-gradient(-45deg, #FFED00, #f6f4f0, #fff3c4, #ffe100);
+  background-size: 400% 400%;
+  animation: backgroundShift 12s ease infinite;
+}
+
+@keyframes backgroundShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
