@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martin's Hello World</title>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <img src="assets/images/salamander-logo-yellow.svg" alt="Salamander">
+        </a>
+    </nav>
+
+    <main class="main-content">
+        <img src="assets/images/salamander-logo-yellow.svg" alt="Salamander Tech Hub" class="salamander-logo">
+        <div class="card">
+            <h1 id="greeting">Hello, World! 👋</h1>
+            <p class="subtitle">Welcome to <span class="rgb-name">Martin's</span> Hello World page</p>
+            <button class="cta-button" onclick="toggleAbout()">👓 Learn More</button>
+            <div id="about" class="hidden">
+                <p>Hi! I'm <span class="rgb-name">Martin</span>, a backend developer in training at ALX with a passion for DevOps & open source.</p>
+            </div>
+            <div class="footer">
+                <p>Created with ❤️ by <span class="rgb-name">Martin Kimani</span></p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Change greeting based on time of day
+        const hour = new Date().getHours();
+        const greeting = document.getElementById("greeting");
+        if (hour < 12) greeting.innerText = "Good Morning, World! 🌅";
+        else if (hour < 18) greeting.innerText = "Good Afternoon, World! ☀️";
+        else greeting.innerText = "Good Evening, World! 🌙";
+
+        // Toggle About section
+        function toggleAbout() {
+            document.getElementById("about").classList.toggle("hidden");
+        }
+    </script>
+</body>
+</html>
