@@ -1,0 +1,82 @@
+body {
+    font-family: 'Geist', sans-serif;
+    background-color: #F6F4F0;
+    margin: 0;
+    padding: 0;
+    color: #000;
+    text-align: center;
+}
+
+.navbar {
+    padding: 1rem;
+    background: #000;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.salamander-logo {
+    width: 100px;
+    margin: 2rem auto;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { filter: drop-shadow(0 0 5px #FFED00); }
+    to { filter: drop-shadow(0 0 15px #FFED00); }
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: auto;
+    max-width: 350px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.subtitle {
+    color: #555;
+}
+
+.cta-button {
+    background: #FFED00;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.cta-button:hover {
+    background: #FFD500;
+}
+
+.hidden {
+    display: none;
+}
+
+.footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* RGB name animation */
+.rgb-name {
+    font-weight: 700;
+    background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet, red);
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rgbWave 5s infinite linear;
+}
+
+@keyframes rgbWave {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
